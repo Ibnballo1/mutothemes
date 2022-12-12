@@ -4211,17 +4211,17 @@ input[type=submit].btn-block {
     list-style: none
 }
 
-.nav-link {
+a {
     display: block;
     padding: .5rem 1rem
 }
 
-.nav-link:focus,
-.nav-link:hover {
+a:focus,
+a:hover {
     text-decoration: none
 }
 
-.nav-link.disabled {
+a.disabled {
     color: #6c757d;
     pointer-events: none;
     cursor: default
@@ -4235,7 +4235,7 @@ input[type=submit].btn-block {
     margin-bottom: -1px
 }
 
-.nav-tabs .nav-link {
+.nav-tabs a {
     border: 1px solid transparent;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem
@@ -26406,7 +26406,7 @@ html {
 
 @media only screen and (max-width:800px) {
 
-    .navbar-text-front,
+    a,
     .navbar-text-muuttofirmoille {
         font-size: 25px !important;
         font-weight: 500 !important;
