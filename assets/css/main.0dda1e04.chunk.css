@@ -299,7 +299,7 @@ select {
 [type=reset],
 [type=submit],
 button {
-    -webkit-appearance: button
+    -webkit-appearance: button;
 }
 
 [type=button]:not(:disabled),
@@ -4296,7 +4296,7 @@ input[type=submit].btn-block {
 
 .navbar {
     position: relative;
-    padding: .5rem 1rem
+    padding: .5rem 1rem;
 }
 
 .navbar,
@@ -11806,7 +11806,6 @@ input.datetimepicker[data-color=yellow]+.bootstrap-datetimepicker-widget table t
     display: inline-block;
     font: normal normal normal 14px/1 "Nucleo Outline";
     font-size: inherit;
-    speak: none;
     text-transform: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
@@ -16849,8 +16848,7 @@ img {
 }
 
 .footer nav {
-    display: inline-block;
-    float: left
+    float: left;
 }
 
 .footer .content {
@@ -26102,7 +26100,7 @@ td.rdtYear:hover {
 
 .ml-auto,
 .mx-auto {
-    margin-left: auto !important
+    margin-left: auto !important;
 }
 
 .displayNone {
@@ -27319,7 +27317,6 @@ html.nucleo-icons-page-styles {
 .nucleo-icons-page-styles .now-ui-icons {
     display: inline-block;
     font: normal normal normal 32px/1 "Nucleo Outline";
-    speak: none;
     text-transform: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale

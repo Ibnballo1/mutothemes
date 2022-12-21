@@ -20,6 +20,7 @@
   <link href="css/main.0dda1e04.chunk.css" rel="stylesheet">
   <meta name="description" content="Varmista halpa hinta muuttopalveluille muuttolaskurilla. Hyödynnämme
  muuttofirmojen vapaita resursseja ja tarjoamme sinulle edullisinta hintaa." data-react-helmet="true">
+ <script src="https://kit.fontawesome.com/210152c720.js" crossorigin="anonymous"></script>
  <?php wp_head(); ?>
 </head>
 <body class="presentation-page sidebar-collapse" data-new-gr-c-s-check-loaded="14.1088.0" data-gr-ext-installed="">
@@ -33,7 +34,7 @@
               <span class="navbar-toggler-bar bottom-bar"></span>
             </button>
           </div>
-          <div class="collapse navbar-collapse">
+          <div class="collapse navbar-collapse" style="margin-left: 900px !important;">
             <?php
                 $args = array(
                     'theme_location' => 'primary',
@@ -42,14 +43,14 @@
                     'link_after'    => '</p>'
                 );
             ?>
-            <ul id="ceva" class="ml-auto navbar-nav">
-            <li class="nav-item">
-              <button type="button" href="" target="_blank" class="nav-link btn-custom btn btn-neutral">
-                <p class="login-button-paragraph">Kirjaudu</p>
-              </button>
-            </li>
-          </ul>
             <?php wp_nav_menu($args); ?>
+            <ul id="ceva" class="ml-auto navbar-nav">
+              <li class="nav-item">
+                <button type="button" href="" target="_blank" class="nav-link btn-custom btn btn-neutral">
+                  <p class="login-button-paragraph">Kirjaudu</p>
+                </button>
+              </li>
+            </ul>
         </div>
       </div>
     </nav>
