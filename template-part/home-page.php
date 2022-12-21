@@ -39,7 +39,13 @@
                     <div class="card-pricing info-card card">
                         <div class="info-card-body card-body">
                             <div class="icon icon-custom" style="display: inline-block;">
-                                <i class="now-ui-icons shopping_bag-16 custom-icon-border" style="z-index: 2;"></i>
+                                <?php if (get_row_index() == 3): ?>
+                                    <i class="fa-solid fa-calendar" style="z-index: 2;"></i>
+                                <?php elseif (get_row_index() == 4): ?>
+                                    <i class="fa-solid fa-check" style="z-index: 2;"></i>
+                                <?php else: ?>
+                                    <i class="fa fa-shopping-bag" aria-hidden="true" style="z-index: 2;"></i>
+                                <?php endif; ?>
                                 <?php if (get_row_index() != 4):?>
                                 <div>
                                     <hr class="horizontalLine">
@@ -111,7 +117,15 @@
                 <div class="col-md-4">
                     <div class="card-pricing info-card-2 h-100 card">
                         <div class="info-card-body-2 card-body">
-                            <div class="icon icon-custom"><i class="now-ui-icons shopping_bag-16"></i></div>
+                            <div class="icon icon-custom">
+                                <?php if (get_row_index() == 2): ?>
+                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                <?php elseif (get_row_index() == 3): ?>
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                <?php else: ?>
+                                    <i class="fa fa-shopping-bag" aria-hidden="true" style="z-index: 2;"></i>
+                                <?php endif; ?>
+                            </div>
                             <h5 class="info-card-title-2 card-title"><?php echo $promise_title; ?></h5>
                             <p class="card-description info-card-paragraph-2"><?php echo $promise_description; ?></p>
                         </div>
@@ -169,11 +183,13 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="mt-5 carousel-item active">
-                                <div class="text-center"><i class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i></div>
+                                <div class="text-center">
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                </div>
                                 <p class="d-md-block mt-5 text-center" style="color: rgb(255, 255, 255);">26.8.2022</p>
                                 <p class="mt-5 text-center rating-paragraph" style="color: rgb(255, 255, 255);">"Hyvin
                                     onnistunut muutto: toteutui täysin aikataulussa, ripeästi ja varmoin ottein tavarat
@@ -186,11 +202,13 @@
                                 </div>
                             </div>
                             <div class="mt-5 carousel-item">
-                                <div class="text-center"><i class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i></div>
+                                <div class="text-center">
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                </div>
                                 <p class="d-md-block mt-5 text-center" style="color: rgb(255, 255, 255);">29.8.2022</p>
                                 <p class="mt-5 text-center rating-paragraph" style="color: rgb(255, 255, 255);">"Nopeaa ja
                                     ystävällistä toimintaa, muutto sujui erinomaisesti. Tavarat saatiin uuteen asuntoon
@@ -203,11 +221,13 @@
                                 </div>
                             </div>
                             <div class="mt-5 carousel-item">
-                                <div class="text-center"><i class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i></div>
+                                <div class="text-center">
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                </div>
                                 <p class="d-md-block mt-5 text-center" style="color: rgb(255, 255, 255);">5.9.2022</p>
                                 <p class="mt-5 text-center rating-paragraph" style="color: rgb(255, 255, 255);">“Muutto meni
                                     näppärästi. Ensimmäinen muutto muuttofirman avulla ja tiedän, mistä tilaan muuton myöskin
@@ -219,11 +239,13 @@
                                 </div>
                             </div>
                             <div class="mt-5 carousel-item">
-                                <div class="text-center"><i class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i></div>
+                                <div class="text-center">
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                </div>
                                 <p class="d-md-block mt-5 text-center" style="color: rgb(255, 255, 255);">25.8.2022</p>
                                 <p class="mt-5 text-center rating-paragraph" style="color: rgb(255, 255, 255);">"Kaikki sujui
                                     erittäin hyvin, muuttomiehet olivat asiallisia ja reippaita ja osasivat hommansa! Työ sujui
@@ -235,11 +257,13 @@
                                 </div>
                             </div>
                             <div class="mt-5 carousel-item">
-                                <div class="text-center"><i class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i></div>
+                                <div class="text-center">
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                </div>
                                 <p class="d-md-block mt-5 text-center" style="color: rgb(255, 255, 255);">2.9.2022</p>
                                 <p class="mt-5 text-center rating-paragraph" style="color: rgb(255, 255, 255);">"Muuttomiehet
                                     olivat paikalla minuutilleen sovittuna ajankohtana. Olivat sympaattisia ja ahkeria ja heidän
@@ -253,11 +277,13 @@
                                 </div>
                             </div>
                             <div class="mt-5 carousel-item">
-                                <div class="text-center"><i class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i><i
-                                        class="now-ui-icons ui-2_like mt-5 text-center rating-icons"></i></div>
+                                <div class="text-center">
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                    <i class="fa fa-thumbs-up mt-5 text-center rating-icons" aria-hidden="true" style="color: white"></i>
+                                </div>
                                 <p class="d-md-block mt-5 text-center" style="color: rgb(255, 255, 255);">29.8.2022</p>
                                 <p class="mt-5 text-center rating-paragraph" style="color: rgb(255, 255, 255);">"Kolme
                                     muuttomiestä toimivat ripeästi, mutta samalla tosi huolellisesti. Kaikki muutossa meni
@@ -271,9 +297,13 @@
                                     <h5>- Muuttaja Helsinki - Vantaa</h5>
                                 </div>
                             </div>
-                        </div><a class="carousel-control-prev" data-slide="prev" href=" " role="button"><i
-                                class="now-ui-icons arrows-1_minimal-left"></i></a><a class="carousel-control-next"
-                            data-slide="next" href=" " role="button"><i class="now-ui-icons arrows-1_minimal-right"></i></a>
+                        </div>
+                        <a class="carousel-control-prev" data-slide="prev" href=" " role="button">
+                            <i class="fa-solid fa-less-than"></i>
+                        </a>
+                        <a class="carousel-control-next" data-slide="next" href=" " role="button">
+                            <i class="fa-solid fa-greater-than"></i>
+                        </a>
                     </div>
                 </div>
             </div>

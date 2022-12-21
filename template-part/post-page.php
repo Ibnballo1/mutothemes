@@ -30,15 +30,13 @@
                     <div class="card-pricing companies-info-card h-100 card">
                         <div class="companies-info-card-body card-body">
                             <div class="icon icon-custom">
-                                <?php
-                                    if ($index == 0) { ?>
-                                        <i class="now-ui-icons shopping_cart-simple"></i>
-                                    <?php } elseif ($index == 1) { ?>
-                                        <i class="now-ui-icons ui-2_like"></i>
-                                    <?php } else { ?>
-                                        <i class="now-ui-icons users_single-02"></i>
-                                    <?php }
-                                ?>
+                                <?php if (get_row_index() == 2): ?>
+                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                <?php elseif (get_row_index() == 3): ?>
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                <?php else: ?>
+                                    <i class="fas fa-shopping-cart"></i>
+                                <?php endif; ?>
                             </div>
                                 <h5 class="companies-info-card-title card-title"><?php echo $card_head; ?></h5>
                                 <p class="card-description companies-info-card-paragraph"><?php echo $card_paragraph; ?></p>
@@ -144,7 +142,9 @@
             <div class="col-sm-3">
                 <button type="button" data-toggle="collapse" aria-expanded="true" class="faq-collapse-btn btn btn-secondary btn-lg btn-block">
                     <span class="faq-collapse-header">Mitä tapahtuu rekisteröitymisen jälkeen?</span>
-                    <span class="faq-collapse-icon faq-arrow"><i aria-expanded="true" class="now-ui-icons arrows-1_minimal-down icon-rotate"></i></span>
+                    <span class="faq-collapse-icon faq-arrow">
+                        <i class="fa fa-angle-up icon-rotate" aria-hidden="true"></i>
+                    </span>
                 </button>
                 <div class="collapse show">
                     <div class="faq-collapse-card card">
@@ -153,5 +153,93 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3"><button type="button" aria-expanded="true" class="faq-collapse-btn btn btn-secondary btn-lg btn-block"><span class="faq-collapse-header">Miten hyväksyn muuttokeikkoja</span><span class="faq-collapse-icon faq-arrow"><i aria-expanded="true" class="now-ui-icons arrows-1_minimal-down icon-rotate"></i></span></button><div class="collapse show"><div class="faq-collapse-card card"><div class="faq-collapse-card-body card-body">Voit hyväksyä muuttokeikkoja kirjautumalla sisään palveluun omalla sähköpostiosoitteellasi ja salasanalla. Avoimet muuttokeikat löytyvät heti etusivulta.</div></div></div></div><div class="col-sm-3"></div></div><div class="row"><div class="col-sm-3"></div><div class="col-sm-3"><button type="button" class="faq-collapse-btn btn btn-secondary btn-lg btn-block"><span class="faq-collapse-header">Miten saan tiedon avoimista muuttokeikoista?</span><span class="faq-collapse-icon faq-arrow"><i aria-expanded="true" class="now-ui-icons arrows-1_minimal-down icon-rotate"></i></span></button><div class="collapse show"><div class="faq-collapse-card card"><div class="faq-collapse-card-body card-body">Kirjautuessasi sisään palveluun näet avoimet muuttokeikat heti etusivulta.</div></div></div></div><div class="col-sm-3"><button type="button" class="faq-collapse-btn btn btn-secondary btn-lg btn-block"><span class="faq-collapse-header">Miten 10% komissio laskutetaan?</span><span class="faq-collapse-icon faq-arrow"><i aria-expanded="true" class="now-ui-icons arrows-1_minimal-down icon-rotate"></i></span></button><div class="collapse show"><div class="faq-collapse-card card"><div class="faq-collapse-card-body card-body">Laskutamme toteutuneista muuttokeikoista 10% komission aina kerran kuukaudessa kuun 15.päivänä. Laskut lähetetään joko sähköpostitse tai verkkolaskuna.</div></div></div></div><div class="col-sm-3"></div></div></div><div class="space-50"></div></div><div class="container-fluid"><div class="row"><div class="map-col d-none d-sm-block col-sm-5"><div class="contactForm-map"><div class="gmap_canvas"><iframe width="100%" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=Helsinki&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div></div><div class="contactForm-column col-sm-7"><div class="contact-form-bg"></div><div class="contactForm-container mr-auto ml-auto row"><h2 class="text-center title contactForm-header" style="color: rgb(255, 255, 255);">Muuttofirma - ota yhteyttä</h2></div><div class="contactForm-div"><form class=""><div class="mb-4 form-group"><input name="contactPerson" placeholder="Yhteyshenkilön nimi" type="text" class="contact-input form-control" value=""></div><div class="mb-4 form-group"><input name="companyName" placeholder="Yrityksen nimi" type="text" class="contact-input form-control" value=""></div><div class="mb-4 form-group"><input name="email" placeholder="Sähköposti" type="email" class="contact-input form-control" value=""></div><div class="mb-4 form-group"><input name="phoneNumber" placeholder="Puhelinnumero" type="text" class="contact-input form-control" value=""></div><div class="mb-4 form-group"><textarea name="message" placeholder="Viesti" class="contact-input custom-textArea form-control"></textarea></div><div class="space-50"></div><div class="register-button-row mr-auto ml-auto row"><button type="button" disabled="" class="btn-round register-button btn btn-primary disabled">Lähetä</button></div><div class="space-50"></div></form></div></div></div></div>
-            </div></div>
+            <div class="col-sm-3">
+                <button type="button" aria-expanded="true" class="faq-collapse-btn btn btn-secondary btn-lg btn-block">
+                    <span class="faq-collapse-header">Miten hyväksyn muuttokeikkoja</span>
+                    <span class="faq-collapse-icon faq-arrow">
+                        <i class="fa fa-angle-up icon-rotate" aria-hidden="true"></i>
+                    </span>
+                </button>
+                <div class="collapse show">
+                    <div class="faq-collapse-card card">
+                        <div class="faq-collapse-card-body card-body">Voit hyväksyä muuttokeikkoja kirjautumalla sisään palveluun omalla sähköpostiosoitteellasi ja salasanalla. Avoimet muuttokeikat löytyvät heti etusivulta.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+                <button type="button" class="faq-collapse-btn btn btn-secondary btn-lg btn-block">
+                    <span class="faq-collapse-header">Miten saan tiedon avoimista muuttokeikoista?</span>
+                    <span class="faq-collapse-icon faq-arrow">
+                        <i class="fa fa-angle-up icon-rotate" aria-hidden="true"></i>
+                    </span>
+                </button>
+                <div class="collapse show">
+                    <div class="faq-collapse-card card">
+                        <div class="faq-collapse-card-body card-body">Kirjautuessasi sisään palveluun näet avoimet muuttokeikat heti etusivulta.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <button type="button" class="faq-collapse-btn btn btn-secondary btn-lg btn-block">
+                    <span class="faq-collapse-header">Miten 10% komissio laskutetaan?</span>
+                    <span class="faq-collapse-icon faq-arrow">
+                        <i class="fa fa-angle-up icon-rotate" aria-hidden="true"></i>
+                    </span>
+                </button>
+                <div class="collapse show">
+                    <div class="faq-collapse-card card">
+                        <div class="faq-collapse-card-body card-body">Laskutamme toteutuneista muuttokeikoista 10% komission aina kerran kuukaudessa kuun 15.päivänä. Laskut lähetetään joko sähköpostitse tai verkkolaskuna.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+    <div class="space-50"></div>
+</div>
+<div class="container-fluid">
+    <div class="row"><div class="map-col d-none d-sm-block col-sm-5">
+        <div class="contactForm-map">
+            <div class="gmap_canvas">
+                <iframe width="100%" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=Helsinki&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="contactForm-column col-sm-7">
+        <div class="contact-form-bg"></div>
+        <div class="contactForm-container mr-auto ml-auto row">
+            <h2 class="text-center title contactForm-header" style="color: rgb(255, 255, 255);">Muuttofirma - ota yhteyttä</h2>
+        </div>
+        <div class="contactForm-div">
+            <form class="">
+                <div class="mb-4 form-group">
+                    <input name="contactPerson" placeholder="Yhteyshenkilön nimi" type="text" class="contact-input form-control" value="">
+                </div>
+                <div class="mb-4 form-group">
+                    <input name="companyName" placeholder="Yrityksen nimi" type="text" class="contact-input form-control" value="">
+                </div>
+                <div class="mb-4 form-group">
+                    <input name="email" placeholder="Sähköposti" type="email" class="contact-input form-control" value="">
+                </div>
+                <div class="mb-4 form-group">
+                    <input name="phoneNumber" placeholder="Puhelinnumero" type="text" class="contact-input form-control" value="">
+                </div>
+                <div class="mb-4 form-group">
+                    <textarea name="message" placeholder="Viesti" class="contact-input custom-textArea form-control"></textarea>
+                </div>
+                <div class="space-50"></div>
+                <div class="register-button-row mr-auto ml-auto row">
+                    <button type="button" disabled="" class="btn-round register-button btn btn-primary disabled">Lähetä</button>
+                </div>
+                <div class="space-50"></div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
