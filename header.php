@@ -1,6 +1,5 @@
 <html <?php language_attributes() ?>>
 <head>
-  <base href="/">
   <meta charset="<?php bloginfo( 'charset' ) ?>">
   <link href="/favicon.png" rel="icon" type="image/png">
   <link href="/apple-icon.png" rel="apple-touch-icon">
